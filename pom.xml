@@ -1,14 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.jvnet.jaxb2_commons</groupId>
-	<artifactId>jaxb2-basics-project</artifactId>
+	<groupId>net.mcbluna.jaxb3_commons</groupId>
+	<artifactId>jaxb3-basics-project</artifactId>
 	<packaging>pom</packaging>
-	<version>0.12.1-SNAPSHOT</version>
-	<name>JAXB2 Basics - Project</name>
-	<url>https://github.com/highsource/jaxb2-basics</url>
-	<description>JAXB2 Basics is a part of JAXB2 Commons project which implements plugins and tools for JAXB 2.x reference implementation.</description>
+	<version>0.13.0</version>
+	<name>JAXB3 Basics - Project</name>
+	<url>https://github.com/mcbluna/jaxb3-basics</url>
+	<description>JAXB3 Basics is a part of JAXB3 Commons project which implements plugins and tools for JAXB 3.x reference implementation.</description>
 	<issueManagement>
 		<system>GitHub Issues</system>
 		<url>https://github.com/highsource/jaxb2-basics/issues</url>
@@ -36,13 +34,12 @@
 		</developer>
 	</developers>
 	<contributors>
-		<!--contributor>
-			<name></name>
-			<email></email>
-			<organization></organization>
-			<organizationUrl></organizationUrl>
-			<timezone></timezone>
-		</contributor-->
+		<contributor>
+			<name>Oliver Bläser</name>
+			<email>McBluna@mcbluna.net</email>
+			<organization>McBluna.net</organization>
+			<organizationUrl>https://www.mcbluna.net</organizationUrl>
+		</contributor>
 	</contributors>
 	<licenses>
 		<license>
@@ -52,9 +49,9 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:git@github.com:highsource/jaxb2-basics.git</connection>
-		<developerConnection>scm:git:git@github.com:highsource/jaxb2-basics.git</developerConnection>
-		<url>https://github.com/highsource/jaxb2-basics</url>
+		<connection>scm:git:git@github.com:mcbluna/jaxb3-basics.git</connection>
+		<developerConnection>scm:git:git@github.com:mcbluna/jaxb3-basics.git</developerConnection>
+		<url>https://github.com/mcbluna/jaxb3-basics</url>
 	</scm>
 	<modules>
 		<module>ant</module>
@@ -138,11 +135,13 @@
 	</profiles>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jaxb.version>3.0.0-M4</jaxb.version>
-		<activation.version>1.2.0</activation.version>
-		<maven-jaxb2-plugin.version>0.14.0</maven-jaxb2-plugin.version>
-		<cxf-codegen-plugin.version>3.2.4</cxf-codegen-plugin.version>
-		<slf4j.version>1.7.7</slf4j.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<jaxb.version>3.0.0</jaxb.version>
+		<activation.version>2.0.0</activation.version>
+		<jaxb-maven-plugin.version>0.15.0</jaxb-maven-plugin.version>
+		<cxf-codegen-plugin.version>3.4.2</cxf-codegen-plugin.version>
+		<slf4j.version>1.7.30</slf4j.version>
 	</properties>
 	<prerequisites>
 		<maven>3.1</maven>
@@ -156,63 +155,72 @@
 		</dependency>
 	</dependencies>
 	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
+		<!-- <snapshotRepository> -->
+		<!-- <id>ossrh</id> -->
+		<!-- <url>https://oss.sonatype.org/content/repositories/snapshots</url> -->
+		<!-- </snapshotRepository> -->
+		<!-- <repository> -->
+		<!-- <id>ossrh</id> -->
+		<!-- <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url> -->
+		<!-- </repository> -->
 		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<id>ftp.mcbluna.net</id>
+			<url>${ftp.mcbluna.net}</url>
 		</repository>
 	</distributionManagement>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.jvnet.jaxb2_commons</groupId>
-				<artifactId>jaxb2-basics-plugins</artifactId>
+				<groupId>net.mcbluna.jaxb3_commons</groupId>
+				<artifactId>jaxb3-basics-plugins</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jvnet.jaxb2_commons</groupId>
-				<artifactId>jaxb2-basics-ant</artifactId>
+				<groupId>net.mcbluna.jaxb3_commons</groupId>
+				<artifactId>jaxb3-basics-ant</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jvnet.jaxb2_commons</groupId>
-				<artifactId>jaxb2-basics-runtime</artifactId>
+				<groupId>net.mcbluna.jaxb3_commons</groupId>
+				<artifactId>jaxb3-basics-runtime</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jvnet.jaxb2_commons</groupId>
-				<artifactId>jaxb2-basics-tools</artifactId>
+				<groupId>net.mcbluna.jaxb3_commons</groupId>
+				<artifactId>jaxb3-basics-tools</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jvnet.jaxb2_commons</groupId>
-				<artifactId>jaxb2-basics-testing</artifactId>
+				<groupId>net.mcbluna.jaxb3_commons</groupId>
+				<artifactId>jaxb3-basics-testing</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jvnet.jaxb2_commons</groupId>
-				<artifactId>jaxb2-basics</artifactId>
+				<groupId>net.mcbluna.jaxb3_commons</groupId>
+				<artifactId>jaxb3-basics</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			<!-- Maven JAXB2 Plugin -->
+			<!-- Maven JAXB3 Plugin -->
 			<dependency>
-				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>${maven-jaxb2-plugin.version}</version>
+				<groupId>com.evolvedbinary.maven.jvnet</groupId>
+				<artifactId>jaxb-maven-plugin-project</artifactId>
+				<version>${jaxb-maven-plugin.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin-testing</artifactId>
-				<version>${maven-jaxb2-plugin.version}</version>
+				<groupId>com.evolvedbinary.maven.jvnet</groupId>
+				<artifactId>jaxb-maven-plugin-core</artifactId>
+				<version>${jaxb-maven-plugin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.evolvedbinary.maven.jvnet</groupId>
+				<artifactId>jaxb-maven-plugin-testing</artifactId>
+				<version>${jaxb-maven-plugin.version}</version>
 			</dependency>
 			<!-- JAXB -->
 			<dependency>
 				<groupId>jakarta.xml.bind</groupId>
 				<artifactId>jakarta.xml.bind-api</artifactId>
-				<version>3.0.0-RC3</version>
+				<version>${jaxb.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.glassfish.jaxb</groupId>
@@ -231,7 +239,7 @@
 			</dependency>
 			<dependency>
 				<groupId>com.sun.activation</groupId>
-				<artifactId>javax.activation</artifactId>
+				<artifactId>jakarta.activation</artifactId>
 				<version>${activation.version}</version>
 			</dependency>
 			<!-- JUnit -->
@@ -244,7 +252,7 @@
 			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
-				<version>2.5</version>
+				<version>2.10.10</version>
 			</dependency>
 			<!-- SLF4J -->
 			<dependency>
@@ -266,17 +274,17 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.2.1</version>
+				<version>3.11</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.4</version>
+				<version>2.8.0</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-beanutils</groupId>
 				<artifactId>commons-beanutils</artifactId>
-				<version>1.9.3</version>
+				<version>1.9.4</version>
 				<exclusions>
 					<exclusion>
 						<groupId>commons-logging</groupId>
@@ -300,12 +308,12 @@
 			<dependency>
 				<groupId>org.apache.ant</groupId>
 				<artifactId>ant</artifactId>
-				<version>1.7.0</version>
+				<version>1.10.9</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.ant</groupId>
 				<artifactId>ant-launcher</artifactId>
-				<version>1.7.0</version>
+				<version>1.10.9</version>
 			</dependency>
 			<!-- Java Parser -->
 			<dependency>
@@ -332,22 +340,11 @@
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.7.0</version>
-					<configuration>
-						<source>1.7</source>
-						<target>1.7</target>
-					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-antrun-plugin</artifactId>
-					<version>1.8</version>
+					<version>3.0.0</version>
 					<dependencies>
-						<!--dependency>
-							<groupId>sun.jdk</groupId>
-							<artifactId>tools</artifactId>
-							<version>1.5.0</version>
-							<scope>system</scope>
-							<systemPath>${java.home}/../lib/tools.jar</systemPath>
-						</dependency-->
 						<dependency>
 							<groupId>junit</groupId>
 							<artifactId>junit</artifactId>
@@ -364,22 +361,22 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.8.2</version>
+					<version>3.0.0-M1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>3.2.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>3.2.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>3.2.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -389,52 +386,52 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
-					<version>2.5.2</version>
+					<version>3.0.0-M1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.7.1</version>
+					<version>3.9.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>3.2.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.21.0</version>
+					<version>3.0.0-M5</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>3.1.1</version>
+					<version>3.1.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>3.3.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.felix</groupId>
 					<artifactId>maven-bundle-plugin</artifactId>
-					<version>3.5.0</version>
+					<version>5.1.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-invoker-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>3.2.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.owasp</groupId>
 					<artifactId>dependency-check-maven</artifactId>
-					<version>3.2.1</version>
+					<version>6.1.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-shade-plugin</artifactId>
-					<version>3.1.1</version>
+					<version>3.2.4</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -442,9 +439,9 @@
 					<version>1.6</version>
 				</plugin>
 				<plugin>
-					<groupId>org.jvnet.jaxb2.maven2</groupId>
-					<artifactId>maven-jaxb2-plugin</artifactId>
-					<version>${maven-jaxb2-plugin.version}</version>
+					<groupId>com.evolvedbinary.maven.jvnet</groupId>
+					<artifactId>jaxb-maven-plugin</artifactId>
+					<version>${jaxb-maven-plugin.version}</version>
 					<executions>
 						<execution>
 							<id>generate</id>
@@ -456,8 +453,16 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh</artifactId>
+				<version>3.4.3</version>
+			</extension>
+		</extensions>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
 				<executions>
 					<execution>
@@ -467,6 +472,14 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>3.0.0-M1</version>
+				<configuration>
+					<sources>${project.build.directory}/${project.build.finalName}-sources.jar</sources>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

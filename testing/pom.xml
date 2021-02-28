@@ -2,13 +2,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>jaxb2-basics-testing</artifactId>
+	<artifactId>jaxb3-basics-testing</artifactId>
 	<packaging>jar</packaging>
-	<name>JAXB2 Basics - Testing</name>
+	<name>JAXB3 Basics - Testing</name>
 	<parent>
-		<groupId>org.jvnet.jaxb2_commons</groupId>
-		<artifactId>jaxb2-basics-project</artifactId>
-		<version>0.12.1-SNAPSHOT</version>
+		<groupId>net.mcbluna.jaxb3_commons</groupId>
+		<artifactId>jaxb3-basics-project</artifactId>
+		<version>0.13.0</version>
 	</parent>
 	<dependencies>
 		<dependency>
@@ -26,12 +26,12 @@
 			<artifactId>commons-io</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-tools</artifactId>
+			<groupId>net.mcbluna.jaxb3_commons</groupId>
+			<artifactId>jaxb3-basics-tools</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-runtime</artifactId>
+			<groupId>net.mcbluna.jaxb3_commons</groupId>
+			<artifactId>jaxb3-basics-runtime</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>jakarta.xml.bind</groupId>

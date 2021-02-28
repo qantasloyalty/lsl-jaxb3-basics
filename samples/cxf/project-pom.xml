@@ -2,11 +2,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.jvnet.jaxb2_commons</groupId>
-	<artifactId>jaxb2-basics-sample-cxf-maven</artifactId>
+	<groupId>net.mcbluna.jaxb3_commons</groupId>
+	<artifactId>jaxb3-basics-sample-cxf-maven</artifactId>
 	<version>${project.version}</version>
 	<packaging>jar</packaging>
-	<name>JAXB2 Basics - Sample [cxf-maven]</name>
+	<name>JAXB3 Basics - Sample [cxf-maven]</name>
 	<dependencies>
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
@@ -21,8 +21,8 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-runtime</artifactId>
+			<groupId>net.mcbluna.jaxb3_commons</groupId>
+			<artifactId>jaxb3-basics-runtime</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
@@ -86,8 +86,8 @@
 						<version>${jaxb.version}</version>
 					</dependency>
 					<dependency>
-						<groupId>org.jvnet.jaxb2_commons</groupId>
-						<artifactId>jaxb2-basics</artifactId>
+						<groupId>net.mcbluna.jaxb3_commons</groupId>
+						<artifactId>jaxb3-basics</artifactId>
 						<version>${project.version}</version>
 					</dependency>
 				</dependencies>

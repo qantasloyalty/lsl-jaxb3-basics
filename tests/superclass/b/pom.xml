@@ -1,29 +1,28 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.jvnet.jaxb2_commons</groupId>
-		<artifactId>jaxb2-basics-test-superclass</artifactId>
-		<version>0.12.1-SNAPSHOT</version>
+		<groupId>net.mcbluna.jaxb3_commons</groupId>
+		<artifactId>jaxb3-basics-test-superclass</artifactId>
+		<version>0.13.0</version>
 	</parent>
-	<artifactId>jaxb2-basics-test-superclass-b</artifactId>
+	<artifactId>jaxb3-basics-test-superclass-b</artifactId>
 	<packaging>jar</packaging>
-	<name>JAXB2 Basics - Test [superclass-b]</name>
+	<name>JAXB3 Basics - Test [superclass-b]</name>
 	<dependencies>
 		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-test-superclass-a</artifactId>
+			<groupId>net.mcbluna.jaxb3_commons</groupId>
+			<artifactId>jaxb3-basics-test-superclass-a</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics</artifactId>
+			<groupId>net.mcbluna.jaxb3_commons</groupId>
+			<artifactId>jaxb3-basics</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.jvnet.jaxb2.maven2</groupId>
-			<artifactId>maven-jaxb2-plugin-testing</artifactId>
+			<groupId>com.evolvedbinary.maven.jvnet</groupId>
+			<artifactId>jaxb-maven-plugin-testing</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -31,8 +30,16 @@
 		<defaultGoal>test</defaultGoal>
 		<plugins>
 			<plugin>
-				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
+				<groupId>com.evolvedbinary.maven.jvnet</groupId>
+				<artifactId>jaxb30-maven-plugin</artifactId>
+				<version>${jaxb-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
 					<extension>true</extension>
 					<args>
@@ -44,20 +51,16 @@
 					</args>
 					<plugins>
 						<plugin>
-							<groupId>org.jvnet.jaxb2_commons</groupId>
-                                                	<artifactId>jaxb2-basics</artifactId>
+							<groupId>net.mcbluna.jaxb3_commons</groupId>
+							<artifactId>jaxb3-basics</artifactId>
 						</plugin>
 						<plugin>
-							<groupId>org.jvnet.jaxb2_commons</groupId>
-							<artifactId>jaxb2-basics-test-superclass-a</artifactId>
+							<groupId>net.mcbluna.jaxb3_commons</groupId>
+							<artifactId>jaxb3-basics-test-superclass-a</artifactId>
 						</plugin>
 					</plugins>
-					<!--episodes>
-						<episode>
-							<groupId>org.jvnet.jaxb2_commons</groupId>
-							<artifactId>jaxb2-basics-test-superclass-a</artifactId>
-						</episode>
-					</episodes-->
+					<!--episodes> <episode> <groupId>org.jvnet.jaxb2_commons</groupId> <artifactId>jaxb2-basics-test-superclass-a</artifactId> </episode> 
+						</episodes -->
 				</configuration>
 			</plugin>
 		</plugins>

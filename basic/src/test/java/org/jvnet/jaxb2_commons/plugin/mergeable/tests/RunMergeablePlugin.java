@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jvnet.jaxb2.maven2.AbstractXJC2Mojo;
+import org.jvnet.jaxb2.maven2.AbstractXJCMojo;
 import org.jvnet.jaxb2.maven2.test.RunXJC2Mojo;
 
 public class RunMergeablePlugin extends RunXJC2Mojo {
@@ -15,7 +15,7 @@ public class RunMergeablePlugin extends RunXJC2Mojo {
 	}
 
 	@Override
-	protected void configureMojo(AbstractXJC2Mojo mojo) {
+	protected void configureMojo(AbstractXJCMojo mojo) {
 		super.configureMojo(mojo);
 		mojo.setForceRegenerate(true);
 	}

@@ -1,16 +1,19 @@
 <?xml version="1.0"?>
-<project name="jaxb2-basics-sample-po-ant" default="install">
-	<property name="artifactId" value="jaxb2-basics-sample-po-ant"/>
+<project name="jaxb3-basics-sample-po-ant" default="install">
+	<property name="artifactId" value="jaxb3-basics-sample-po-ant"/>
 	<path id="compile.path">
 		<fileset dir="${basedir}/lib">
 			<include name="commons-lang3-*.jar"/>
 			<include name="jaxb-api-*.jar"/>
-			<include name="jaxb2-basics-runtime-*.jar"/>
+			<include name="jaxb3-basics-runtime-*.jar"/>
+			
+			<include name="jakarta.xml.bind-api-*.jar"/>
+			<include name="jaxb-runtime-*.jar"/>
 		</fileset>
 	</path>
 	<path id="test-compile.path">
 		<fileset dir="${basedir}/lib">
-			<include name="javax.activation-*.jar"/>
+			<include name="jakarta.activation-*.jar"/>
 			<include name="jaxb-api-*.jar"/>
 			<include name="jaxb-impl-*.jar"/>
 			<include name="jaxb-runtime-*.jar"/>
@@ -18,19 +21,21 @@
 			<include name="stax-api-*.jar"/>
 			<include name="jsr173_api-*.jar"/>
 
-			<include name="jaxb2-basics-runtime-*.jar"/>
+			<include name="jaxb3-basics-runtime-*.jar"/>
 			<include name="junit-*.jar"/>
-			<include name="jaxb2-basics-testing-*.jar"/>
+			<include name="jaxb3-basics-testing-*.jar"/>
 			<include name="xmlunit-*.jar"/>
 			<include name="commons-io-*.jar"/>
 			<include name="commons-lang3-*.jar"/>
 			<include name="slf4j-*.jar"/>
 			<include name="jcl-over-slf4j-*.jar"/>
+
+			<include name="jakarta.xml.bind-api-*.jar"/>
 		</fileset>
 	</path>
 	<path id="test.path">
 		<fileset dir="${basedir}/lib">
-			<include name="javax.activation-*.jar"/>
+			<include name="jakarta.activation-*.jar"/>
 			<include name="jaxb-api-*.jar"/>
 			<include name="jaxb-impl-*.jar"/>
 			<include name="jaxb-runtime-*.jar"/>
@@ -38,14 +43,16 @@
 			<include name="stax-api-*.jar"/>
 			<include name="jsr173_api-*.jar"/>
 
-			<include name="jaxb2-basics-runtime-*.jar"/>
+			<include name="jaxb3-basics-runtime-*.jar"/>
 			<include name="junit-*.jar"/>
-			<include name="jaxb2-basics-testing-*.jar"/>
+			<include name="jaxb3-basics-testing-*.jar"/>
 			<include name="xmlunit-*.jar"/>
 			<include name="commons-io-*.jar"/>
 			<include name="commons-lang3-*.jar"/>
 			<include name="slf4j-*.jar"/>
 			<include name="jcl-over-slf4j-*.jar"/>
+
+			<include name="jakarta.xml.bind-api-*.jar"/>
 		</fileset>
 	</path>
 	<target name="clean">
@@ -58,7 +65,7 @@
 			<!-- XJC2 Task classpath -->
 			<classpath>
 				<fileset dir="${basedir}/lib">
-					<include name="javax.activation-*.jar"/>
+					<include name="jakarta.activation-*.jar"/>
 					<include name="jaxb-api-*.jar"/>
 					<include name="jaxb-impl-*.jar"/>
 					<include name="jaxb-runtime-*.jar"/>
@@ -67,9 +74,17 @@
 					<include name="stax-api-*.jar"/>
 
 					<include name="jaxb-xjc-*.jar"/>
-					<include name="jaxb2-basics-ant-*.jar"/>
+					<include name="jaxb3-basics-ant-*.jar"/>
 
 					<include name="jcl-over-slf4j-*.jar"/>
+					
+					<include name="codemodel-*.jar"/>
+					<include name="jakarta.xml.bind-api-*.jar"/>
+					<include name="istack-commons-runtime-*.jar"/>
+					<include name="xsom-*.jar"/>
+					<include name="txw2-*.jar"/>
+					<include name="relaxng-datatype-*.jar"/>
+					<include name="rngom-*.jar"/>
 				</fileset>
 			</classpath>
 		</taskdef>
@@ -91,8 +106,8 @@
 			<!-- Plugins -->
 			<classpath>
 				<fileset dir="${basedir}/lib">
-					<!-- JAXB2 Basics library -->
-					<include name="jaxb2-basics-plugins-*.jar"/>
+					<!-- JAXB3 Basics library -->
+					<include name="jaxb3-basics-plugins-*.jar"/>
 				</fileset>
 			</classpath>
 		</xjc>
@@ -104,8 +119,8 @@
 			srcdir="${basedir}/src/main/java:${basedir}/target/generated-sources/xjc"
 			classpathref="compile.path"
 			includeantruntime="false"
-			source="1.7"
-			target="1.7">
+			source="1.8"
+			target="1.8">
 		</javac>
 		<copy todir="${basedir}/target/classes">
 			<fileset dir="${basedir}/src/main/resources"/>
@@ -121,8 +136,8 @@
 			srcdir="${basedir}/src/test/java:${basedir}/target/generated-sources/xjc"
 			classpathref="test-compile.path"
 			includeantruntime="false"
-			source="1.7"
-			target="1.7">
+			source="1.8"
+			target="1.8">
 		</javac>
 		<copy todir="${basedir}/target/test-classes">
 			<fileset dir="${basedir}/src/test/resources"/>
