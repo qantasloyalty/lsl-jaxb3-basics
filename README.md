@@ -5,6 +5,17 @@ This is a fork of JAXB2 Basics from [ highsource/jaxb2-basics ](https://github.c
 
 The purpose of my fork is to support JAXB 3.
 
+    <repository>
+        <id>mcbluna.net</id>
+        <url>https://mcbluna.net/repository/</url>
+    </repository>
+
+    <plugin>
+      <groupId>net.mcbluna.jaxb3_commons</groupId>
+      <artifactId>jaxb3-basics</artifactId>
+      <version>0.13.0</version>
+    </plugin>
+
 # JAXB2 Basics
 
 JAXB2 Basics is an [open source](https://github.com/highsource/jaxb2-basics/blob/master/LICENSE) project
