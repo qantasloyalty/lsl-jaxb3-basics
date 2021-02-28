@@ -1,3 +1,10 @@
+* **Supports JAXB 3.**
+
+## Provenance
+This is a fork of JAXB2 Basics from [ highsource/jaxb2-basics ](https://github.com/highsource/jaxb2-basics).
+
+The purpose of my fork is to support JAXB 3.
+
 # JAXB2 Basics
 
 JAXB2 Basics is an [open source](https://github.com/highsource/jaxb2-basics/blob/master/LICENSE) project
