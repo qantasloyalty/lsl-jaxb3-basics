@@ -3,7 +3,7 @@
 	<groupId>net.mcbluna.jaxb3_commons</groupId>
 	<artifactId>jaxb3-basics-project</artifactId>
 	<packaging>pom</packaging>
-	<version>0.13.0</version>
+	<version>0.14.0</version>
 	<name>JAXB3 Basics - Project</name>
 	<url>https://github.com/mcbluna/jaxb3-basics</url>
 	<description>JAXB3 Basics is a part of JAXB3 Commons project which implements plugins and tools for JAXB 3.x reference implementation.</description>
@@ -137,7 +137,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<jaxb.version>3.0.0</jaxb.version>
+		<jaxb.version>3.0.1</jaxb.version>
 		<activation.version>2.0.0</activation.version>
 		<jaxb-maven-plugin.version>0.15.0</jaxb-maven-plugin.version>
 		<cxf-codegen-plugin.version>3.4.2</cxf-codegen-plugin.version>

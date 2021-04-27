@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>net.mcbluna.jaxb3_commons</groupId>
 		<artifactId>jaxb3-basics-tests</artifactId>
-		<version>0.13.0</version>
+		<version>0.14.0</version>
 	</parent>
 	<artifactId>jaxb3-basics-test-simplify-02</artifactId>
 	<packaging>jar</packaging>
