@@ -13,7 +13,7 @@ The purpose of my fork is to support JAXB 3.
     <plugin>
       <groupId>net.mcbluna.jaxb3_commons</groupId>
       <artifactId>jaxb3-basics</artifactId>
-      <version>0.13.0</version>
+      <version>0.14.0</version>
     </plugin>
 
 # JAXB2 Basics
