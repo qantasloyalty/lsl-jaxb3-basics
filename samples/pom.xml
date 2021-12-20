@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>net.mcbluna.jaxb3_commons</groupId>
 		<artifactId>jaxb3-basics-project</artifactId>
-		<version>0.14.0</version>
+		<version>0.15.0</version>
 	</parent>
 	<modules>
 		<module>po</module>

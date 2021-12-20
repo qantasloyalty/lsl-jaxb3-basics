@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>net.mcbluna.jaxb3_commons</groupId>
 		<artifactId>jaxb3-basics-project</artifactId>
-		<version>0.14.0</version>
+		<version>0.15.0</version>
 	</parent>
 	<dependencies>
 		<dependency>
@@ -48,7 +48,17 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring</artifactId>
+			<artifactId>spring-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
