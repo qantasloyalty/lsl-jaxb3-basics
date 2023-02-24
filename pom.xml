@@ -5,7 +5,7 @@
   <groupId>au.com.qantas.loyalty.lsl</groupId>
   <artifactId>jaxb3-basics-project</artifactId>
   <packaging>pom</packaging>
-  <version>0.15.0</version>
+  <version>develop</version>
   <name>JAXB3 Basics - Project</name>
   <url>https://github.com/qantasloyalty/lsl-jaxb3-basics</url>
   <description>JAXB3 Basics is a part of JAXB3 Commons project which implements plugins and tools for JAXB 3.x reference implementation.</description>
@@ -100,8 +100,8 @@
   </profiles>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>19</maven.compiler.source>
+    <maven.compiler.target>19</maven.compiler.target>
     <jaxb.version>3.0.2</jaxb.version>
     <activation.version>2.0.1</activation.version>
     <jaxb-maven-plugin.version>0.15.0</jaxb-maven-plugin.version>
