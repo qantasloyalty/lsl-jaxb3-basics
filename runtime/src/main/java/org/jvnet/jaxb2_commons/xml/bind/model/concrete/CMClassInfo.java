@@ -37,8 +37,8 @@ public class CMClassInfo<T, C extends T> implements MClassInfo<T, C> {
 	private final MClassTypeInfo<T, C, ?> baseTypeInfo;
 	private final QName elementName;
 
-	private Map<String, MPropertyInfo<T, C>> propertiesMap = new HashMap<String, MPropertyInfo<T, C>>();
-	private List<MPropertyInfo<T, C>> properties = new ArrayList<MPropertyInfo<T, C>>();
+	private Map<String, MPropertyInfo<T, C>> propertiesMap = new HashMap<>();
+	private List<MPropertyInfo<T, C>> properties = new ArrayList<>();
 	private List<MPropertyInfo<T, C>> unmodifiableProperties = Collections
 			.unmodifiableList(properties);
 	private QName typeName;

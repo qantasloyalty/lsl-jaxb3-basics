@@ -59,7 +59,7 @@ public class JAXBElementCodeGenerator<A extends Arguments<A>> extends
 	}
 
 	private Set<JType> getPossibleValueTypes(Collection<JType> possibleTypes) {
-		final Set<JType> possibleValueTypes = new HashSet<JType>();
+		final Set<JType> possibleValueTypes = new HashSet<>();
 
 		for (JType possibleType : possibleTypes) {
 			Validate.isInstanceOf(JClass.class, possibleType);
