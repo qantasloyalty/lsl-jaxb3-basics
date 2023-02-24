@@ -37,7 +37,7 @@ public class ObjectFactoryCustomization {
 		this.extendsClass = extendsClass;
 	}
 
-	private List<ImplementsInterface> implementsInterface = new ArrayList<ImplementsInterface>();
+	private List<ImplementsInterface> implementsInterface = new ArrayList<>();
 
 	@XmlElement(namespace = "http://jaxb2-commons.dev.java.net/basic/inheritance", name = "implements")
 	public List<ImplementsInterface> getImplementsInterface() {

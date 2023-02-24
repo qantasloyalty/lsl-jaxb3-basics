@@ -9,6 +9,7 @@
   <name>JAXB3 Basics - Project</name>
   <url>https://github.com/qantasloyalty/lsl-jaxb3-basics</url>
   <description>JAXB3 Basics is a part of JAXB3 Commons project which implements plugins and tools for JAXB 3.x reference implementation.</description>
+
   <licenses>
     <license>
       <name>BSD-Style License</name>
@@ -16,6 +17,37 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+
+  <distributionManagement>
+    <repository>
+      <id>qantasloyalty-mvn-release</id>
+      <name>mvnrepo.qantasloyalty.io-release</name>
+      <url>https://mvnrepo.qantasloyalty.io/repository/qantasloyalty-mvn-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>qantasloyalty-mvn-snapshot</id>
+      <name>mvnrepo.qantasloyalty.io-snapshot</name>
+      <url>https://mvnrepo.qantasloyalty.io/repository/qantasloyalty-mvn-snapshot</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <properties>
+    <docker.image.prefix>qantasloyalty</docker.image.prefix>
+    <docker.repo.uri>113053657575.dkr.ecr.ap-southeast-2.amazonaws.com</docker.repo.uri>
+    <maven.compiler.source>19</maven.compiler.source>
+    <maven.compiler.target>19</maven.compiler.target>
+    <maven.compiler.parameters>true</maven.compiler.parameters>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>
+      UTF-8</project.reporting.outputEncoding>
+    <buildTag>${env.BUILD_TAG}</buildTag>
+    <buildUrl>${env.BUILD_URL}</buildUrl>
+    <jaxb.version>3.0.2</jaxb.version>
+    <activation.version>2.0.1</activation.version>
+    <jaxb-maven-plugin.version>0.15.0</jaxb-maven-plugin.version>
+    <cxf-codegen-plugin.version>3.4.2</cxf-codegen-plugin.version>
+    <slf4j.version>2.0.6</slf4j.version>
+  </properties>
 
   <modules>
     <module>ant</module>
@@ -98,16 +130,7 @@
       </build>
     </profile>
   </profiles>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>19</maven.compiler.source>
-    <maven.compiler.target>19</maven.compiler.target>
-    <jaxb.version>3.0.2</jaxb.version>
-    <activation.version>2.0.1</activation.version>
-    <jaxb-maven-plugin.version>0.15.0</jaxb-maven-plugin.version>
-    <cxf-codegen-plugin.version>3.4.2</cxf-codegen-plugin.version>
-    <slf4j.version>1.7.32</slf4j.version>
-  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -289,7 +312,8 @@
           <artifactId>maven-release-plugin</artifactId>
           <version>3.0.0-M7</version>
           <configuration>
-            <mavenExecutorId>forked-path</mavenExecutorId>
+            <mavenExecutorId>
+              forked-path</mavenExecutorId>
             <useReleaseProfile>false</useReleaseProfile>
             <arguments>-Psonatype-oss-release -Psamples</arguments>
           </configuration>
@@ -426,7 +450,8 @@
             <configuration>
               <rules>
                 <requireMavenVersion>
-                  <version>3.6.0</version>
+                  <version>
+                    3.6.0</version>
                 </requireMavenVersion>
               </rules>
             </configuration>
@@ -455,7 +480,8 @@
         <artifactId>maven-deploy-plugin</artifactId>
         <version>3.0.0-M2</version>
         <configuration>
-          <sources>${project.build.directory}/${project.build.finalName}-sources.jar</sources>
+          <sources>
+            ${project.build.directory}/${project.build.finalName}-sources.jar</sources>
         </configuration>
       </plugin>
     </plugins>

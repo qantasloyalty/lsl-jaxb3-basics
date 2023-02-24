@@ -17,12 +17,12 @@ import com.sun.tools.xjc.outline.Outline;
 public class AutoInheritancePlugin extends AbstractParameterizablePlugin {
 
 	private String xmlRootElementsExtend = null;
-	private List<String> xmlRootElementsImplement = new LinkedList<String>();
+	private List<String> xmlRootElementsImplement = new LinkedList<>();
 
 	private String xmlTypesExtend = null;
-	private List<String> xmlTypesImplement = new LinkedList<String>();
+	private List<String> xmlTypesImplement = new LinkedList<>();
 
-	private List<String> jaxbElementsImplement = new LinkedList<String>();
+	private List<String> jaxbElementsImplement = new LinkedList<>();
 
 	public String getXmlRootElementsExtend() {
 		return xmlRootElementsExtend;

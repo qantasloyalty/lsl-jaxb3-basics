@@ -27,9 +27,9 @@ public class ListCodeGenerator<A extends Arguments<A>> extends
 		final JClass _class = (JClass) type;
 
 		final JClass jaxbElementClass = getCodeModel().ref(JAXBElement.class);
-		final Set<JType> arrays = new HashSet<JType>();
-		final Collection<JClass> jaxbElements = new HashSet<JClass>();
-		final Set<JType> otherTypes = new HashSet<JType>();
+		final Set<JType> arrays = new HashSet<>();
+		final Collection<JClass> jaxbElements = new HashSet<>();
+		final Set<JType> otherTypes = new HashSet<>();
 		for (final JType possibleType : possibleTypes) {
 			if (possibleType.isArray()) {
 				arrays.add(possibleType);
