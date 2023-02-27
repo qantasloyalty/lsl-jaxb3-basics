@@ -38,8 +38,7 @@
     <maven.compiler.target>19</maven.compiler.target>
     <maven.compiler.parameters>true</maven.compiler.parameters>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>
-      UTF-8</project.reporting.outputEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <buildTag>${env.BUILD_TAG}</buildTag>
     <buildUrl>${env.BUILD_URL}</buildUrl>
     <jaxb.version>3.0.2</jaxb.version>
@@ -47,6 +46,8 @@
     <jaxb-maven-plugin.version>0.15.0</jaxb-maven-plugin.version>
     <cxf-codegen-plugin.version>3.4.2</cxf-codegen-plugin.version>
     <slf4j.version>2.0.6</slf4j.version>
+    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml,
+      ${project.basedir}/target/site/jacoco-it/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <modules>
