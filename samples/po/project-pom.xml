@@ -79,8 +79,8 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>19</source>
+          <target>19</target>
         </configuration>
       </plugin>
     </plugins>

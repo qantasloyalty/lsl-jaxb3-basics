@@ -1,5 +1,6 @@
 package org.hisrc.xml.bind.tests.addelement;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,44 +10,42 @@ import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlTransient;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Assert;
-import org.junit.Test;
+class AddElementTest {
 
-public class AddElementTest {
+  @Test
+  void addsElement() throws JAXBException {
 
-	@Test
-	public void addsElement() throws JAXBException {
+    JAXBContext context = JAXBContext.newInstance(Element.class);
+    final Element element = (Element) context.createUnmarshaller()
+        .unmarshal(getClass().getResource("element.xml"));
+    assertEquals("beta", element.getChildren().get(1).getValue());
+  }
 
-		JAXBContext context = JAXBContext.newInstance(Element.class);
-		final Element element = (Element) context.createUnmarshaller()
-				.unmarshal(getClass().getResource("element.xml"));
-		Assert.assertEquals("beta", element.getChildren().get(1).getValue());
-	}
+  @XmlRootElement(name = "element")
+  public static class Element {
+    private List<Element> children = new LinkedList<Element>();
 
-	@XmlRootElement(name = "element")
-	public static class Element {
-		private List<Element> children = new LinkedList<Element>();
+    @XmlTransient
+    public List<Element> getChildren() {
+      return children;
+    }
 
-		@XmlTransient
-		public List<Element> getChildren() {
-			return children;
-		}
+    @XmlElement(name = "element")
+    public void setChild(Element child) {
+      this.children.add(child);
+    }
 
-		@XmlElement(name = "element")
-		public void setChild(Element child) {
-			this.children.add(child);
-		}
+    private String value;
 
-		private String value;
+    @XmlAttribute
+    public String getValue() {
+      return value;
+    }
 
-		@XmlAttribute
-		public String getValue() {
-			return value;
-		}
-
-		public void setValue(String value) {
-			this.value = value;
-		}
-	}
+    public void setValue(String value) {
+      this.value = value;
+    }
+  }
 }

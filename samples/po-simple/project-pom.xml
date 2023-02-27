@@ -3,10 +3,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>au.com.qantas.loyalty.lsl</groupId>
-  <artifactId>jaxb3-basics-sample-basic-maven</artifactId>
+  <artifactId>jaxb3-basics-sample-po-maven</artifactId>
   <version>${project.version}</version>
   <packaging>jar</packaging>
-  <name>JAXB3 Basics - Sample [basic-maven]</name>
+  <name>JAXB3 Basics - Sample [po-maven]</name>
   <dependencies>
     <dependency>
       <groupId>org.glassfish.jaxb</groupId>
@@ -19,11 +19,6 @@
       <artifactId>javax.activation</artifactId>
       <version>${activation.version}</version>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>au.com.qantas.loyalty.lsl</groupId>
-      <artifactId>jaxb3-basics-runtime</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>au.com.qantas.loyalty.lsl</groupId>
@@ -54,12 +49,8 @@
         </executions>
         <configuration>
           <args>
-            <arg>-XtoString</arg>
-            <arg>-Xequals</arg>
-            <arg>-XhashCode</arg>
-            <arg>-Xinheritance</arg>
-            <arg>-Xcopyable</arg>
-            <arg>-XenumValue</arg>
+            <arg>-XsimpleEquals</arg>
+            <arg>-XsimpleHashCode</arg>
           </args>
           <plugins>
             <plugin>
