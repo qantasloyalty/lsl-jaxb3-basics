@@ -34,23 +34,7 @@ pipeline {
                 stash name: 'target', includes: '**/target/**'
             }
         }
-        // stage('Sonar Analysis') {
-        //     agent {
-        //         label 'openjdk-19'
-        //     }
-        //     steps {
-        //         unstash 'target'
-        //         withSonarQubeEnv('sonar.qantasloyalty.io') {
-        //             withMaven(mavenOptions) {
-        //                 echo "MAVEN_OPTS: ${MAVEN_OPTS}"
-        //                 sh 'mvn sonar:sonar -Dsonar.projectVersion=${APP_VERSION}'
-        //             }
-        //         }
-        //         timeout(time: 1, unit: 'HOURS') {
-        //             waitForQualityGate abortPipeline: true
-        //         }
-        //     }
-        // }
+        // stage('Sonar Analysis') Forked repo which only has around 6% coverage
         stage('Artefact Deploy') {
             agent {
                 label 'openjdk-19'
