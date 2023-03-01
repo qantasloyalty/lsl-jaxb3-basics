@@ -32,9 +32,9 @@ public class ObjectCodeGenerator<A extends Arguments<A>> extends
 		} else {
 			final JClass jaxbElementClass = getCodeModel().ref(
 					JAXBElement.class);
-			final Set<JType> arrays = new HashSet<JType>();
-			final Collection<JClass> jaxbElements = new HashSet<JClass>();
-			final Set<JType> otherTypes = new HashSet<JType>();
+			final Set<JType> arrays = new HashSet<>();
+			final Collection<JClass> jaxbElements = new HashSet<>();
+			final Set<JType> otherTypes = new HashSet<>();
 			for (final JType possibleType : possibleTypes) {
 				if (possibleType.isArray()) {
 					arrays.add(possibleType);
@@ -84,7 +84,7 @@ public class ObjectCodeGenerator<A extends Arguments<A>> extends
 				getCodeGenerator().generate(
 						jaxbElementBlock,
 						jaxbElementType,
-						new HashSet<JType>(jaxbElements),
+						new HashSet<>(jaxbElements),
 						true,
 						arguments.cast("JAXBElement", jaxbElementBlock,
 								jaxbElementType, true));
@@ -113,7 +113,7 @@ public class ObjectCodeGenerator<A extends Arguments<A>> extends
 
 	private Set<JType> getJAXBElementValueTypes(
 			final Collection<JClass> jaxbElements) {
-		final Set<JType> valueTypes = new HashSet<JType>();
+		final Set<JType> valueTypes = new HashSet<>();
 		for (JClass jaxbElement : jaxbElements) {
 			final JType valueType;
 			if (jaxbElement.getTypeParameters().size() == 1) {

@@ -1,19 +1,15 @@
-* **Supports JAXB 3.**
+- **Supports JAXB 3.**
 
 ## Provenance
+
 This is a fork of JAXB2 Basics from [ highsource/jaxb2-basics ](https://github.com/highsource/jaxb2-basics).
 
 The purpose of my fork is to support JAXB 3.
 
-    <repository>
-        <id>mcbluna.net</id>
-        <url>https://mcbluna.net/repository/</url>
-    </repository>
-
     <plugin>
-      <groupId>net.mcbluna.jaxb3_commons</groupId>
+      <groupId>au.com.qantas.loyalty.lsl</groupId>
       <artifactId>jaxb3-basics</artifactId>
-      <version>0.15.0</version>
+      <version>develop</version>
     </plugin>
 
 # JAXB2 Basics
@@ -31,25 +27,26 @@ JAXB2 Basics can only be used with Java 1.7 and above.
 
 ## Using JAXB2 Basics
 
-* [Using JAXB2 Basics Plugins](https://github.com/highsource/jaxb2-basics/wiki/Using-JAXB2-Basics-Plugins)
+- [Using JAXB2 Basics Plugins](https://github.com/highsource/jaxb2-basics/wiki/Using-JAXB2-Basics-Plugins)
 
 ## JAXB2 Basics Plugins
-* [SimpleEquals Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-SimpleEquals-Plugin) - generates runtime-free reflection-free `equals(...)` methods.
-* [SimpleHashCode Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-SimpleHashCode-Plugin) - generates runtime-free reflection-free `hashCode()` methods.
-* Equals Plugin - generates reflection-free strategic `equals(...)` method.
-* HashCode Plugin - generates reflection-free strategic `hashCode()` method.
-* ToString Plugin - generates reflection-free strategic `toString()` methods.
-* Copyable Plugin - generates reflection-free strategic `copy(...)` deep copying.
-* Mergeable Plugin - generates reflection-free strategic `merge(...)` methods to merge data from two source objects into the given object.
-* Inheritance Plugin - makes schema-derived classes extend certain class or implement certain interfaces.
-* Wildcard Plugin - allows you to specify the wildcard mode for the wildcard properties.
-* AutoInheritance Plugin - makes classes derived from global elements or complex types extend or implement certain classes or interfaces automatically.
-* [Setters Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-Setters-Plugin) - generates setters for collections.
-* [Simplify Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-Simplify-Plugin) - simplifies weird properties like `aOrBOrC`.
-* [EnumValue Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-EnumValue-Plugin) - makes all the generated enums implement the `EnumValue<T>` interface.
-* JAXBIndex Plugin - generated `jaxb.index` files listing schema-derived classes.
-* [FixJAXB1058 Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-FixJAXB1058-Plugin) - fixes [JAXB-1058](https://java.net/jira/browse/JAXB-1058).
 
-## Credits ##
+- [SimpleEquals Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-SimpleEquals-Plugin) - generates runtime-free reflection-free `equals(...)` methods.
+- [SimpleHashCode Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-SimpleHashCode-Plugin) - generates runtime-free reflection-free `hashCode()` methods.
+- Equals Plugin - generates reflection-free strategic `equals(...)` method.
+- HashCode Plugin - generates reflection-free strategic `hashCode()` method.
+- ToString Plugin - generates reflection-free strategic `toString()` methods.
+- Copyable Plugin - generates reflection-free strategic `copy(...)` deep copying.
+- Mergeable Plugin - generates reflection-free strategic `merge(...)` methods to merge data from two source objects into the given object.
+- Inheritance Plugin - makes schema-derived classes extend certain class or implement certain interfaces.
+- Wildcard Plugin - allows you to specify the wildcard mode for the wildcard properties.
+- AutoInheritance Plugin - makes classes derived from global elements or complex types extend or implement certain classes or interfaces automatically.
+- [Setters Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-Setters-Plugin) - generates setters for collections.
+- [Simplify Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-Simplify-Plugin) - simplifies weird properties like `aOrBOrC`.
+- [EnumValue Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-EnumValue-Plugin) - makes all the generated enums implement the `EnumValue<T>` interface.
+- JAXBIndex Plugin - generated `jaxb.index` files listing schema-derived classes.
+- [FixJAXB1058 Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-FixJAXB1058-Plugin) - fixes [JAXB-1058](https://java.net/jira/browse/JAXB-1058).
 
-* Many thanks to **James Annesley** for his ideas and help with the [SimpleEquals Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-SimpleEquals-Plugin) and the [SimpleHashCode Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-SimpleHashCode-Plugin).
+## Credits
+
+- Many thanks to **James Annesley** for his ideas and help with the [SimpleEquals Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-SimpleEquals-Plugin) and the [SimpleHashCode Plugin](https://github.com/highsource/jaxb2-basics/wiki/JAXB2-SimpleHashCode-Plugin).

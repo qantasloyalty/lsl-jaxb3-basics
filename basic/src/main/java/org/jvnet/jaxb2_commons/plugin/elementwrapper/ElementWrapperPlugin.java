@@ -46,13 +46,13 @@ public class ElementWrapperPlugin extends AbstractModelPlugin {
 	protected void postProcessModel(Model model,
 			final MModelInfo<NType, NClass> mmodel, ErrorHandler errorHandler) {
 
-		final Collection<MClassInfo<NType, NClass>> classInfos = new ArrayList<MClassInfo<NType, NClass>>(
+		final Collection<MClassInfo<NType, NClass>> classInfos = new ArrayList<>(
 				mmodel.getClassInfos());
 		for (final MClassInfo<NType, NClass> rootClassInfo : classInfos) {
 			if (/*
 				 * TODO !getIgnoring().isIgnored(classInfo) &&
 				 */true) {
-				List<MPropertyInfo<NType, NClass>> properties = new ArrayList<MPropertyInfo<NType, NClass>>(
+				List<MPropertyInfo<NType, NClass>> properties = new ArrayList<>(
 						rootClassInfo.getProperties());
 				for (MPropertyInfo<NType, NClass> propertyInfo0 : properties) {
 

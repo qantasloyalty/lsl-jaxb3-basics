@@ -42,17 +42,17 @@ public class FixJAXB1058Plugin extends Plugin {
 	public boolean run(Outline outline, Options opt, ErrorHandler errorHandler)
 			throws SAXException {
 		try {
-			DummyListField_$get = new FieldAccessor<JMethod>(
+			DummyListField_$get = new FieldAccessor<>(
 					DummyListField.class, "$get", JMethod.class);
 
-			IsSetField_core = new FieldAccessor<FieldOutline>(IsSetField.class,
+			IsSetField_core = new FieldAccessor<>(IsSetField.class,
 					"core", FieldOutline.class);
-			AbstractListField_field = new FieldAccessor<JFieldVar>(
+			AbstractListField_field = new FieldAccessor<>(
 					DummyListField.class.getSuperclass(), "field",
 					JFieldVar.class);
-			AbstractListField_listT = new FieldAccessor<JClass>(
+			AbstractListField_listT = new FieldAccessor<>(
 					DummyListField.class.getSuperclass(), "listT", JClass.class);
-			DummyListField_coreList = new FieldAccessor<JClass>(
+			DummyListField_coreList = new FieldAccessor<>(
 					DummyListField.class, "coreList",
 					JClass.class);
 		} catch (Exception ex) {

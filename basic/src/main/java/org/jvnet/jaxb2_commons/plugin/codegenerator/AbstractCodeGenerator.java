@@ -11,7 +11,7 @@ public abstract class AbstractCodeGenerator<A extends Arguments<A>> implements
 	private final CodeGenerationImplementor<A> implementor;
 	private final JCodeModel codeModel;
 
-	public AbstractCodeGenerator(CodeGenerator<A> codeGenerator,
+	protected AbstractCodeGenerator(CodeGenerator<A> codeGenerator,
 			CodeGenerationImplementor<A> implementor) {
 		this.codeGenerator = Validate.notNull(codeGenerator);
 		this.implementor = Validate.notNull(implementor);
