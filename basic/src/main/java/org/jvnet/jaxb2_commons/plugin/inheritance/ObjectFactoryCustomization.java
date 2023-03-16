@@ -10,43 +10,43 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-@XmlRootElement(namespace = "http://jaxb2-commons.dev.java.net/basic/inheritance", name = "objectFactory")
-@XmlType(propOrder = { "extendsClass", "implementsInterface" })
+@XmlRootElement(namespace = "http://jaxb3-commons.dev.java.net/basic/inheritance", name = "objectFactory")
+@XmlType(propOrder = {"extendsClass", "implementsInterface"})
 @XmlAccessorType(XmlAccessType.PUBLIC_MEMBER)
 public class ObjectFactoryCustomization {
 
-	private String packageName;
+  private String packageName;
 
-	@XmlAttribute
-	public String getPackageName() {
-		return packageName;
-	}
+  @XmlAttribute
+  public String getPackageName() {
+    return packageName;
+  }
 
-	public void setPackageName(String packageName) {
-		this.packageName = packageName;
-	}
+  public void setPackageName(String packageName) {
+    this.packageName = packageName;
+  }
 
-	private ExtendsClass extendsClass;
+  private ExtendsClass extendsClass;
 
-	@XmlElement(namespace = "http://jaxb2-commons.dev.java.net/basic/inheritance", name = "extends")
-	public ExtendsClass getExtendsClass() {
-		return extendsClass;
-	}
+  @XmlElement(namespace = "http://jaxb3-commons.dev.java.net/basic/inheritance", name = "extends")
+  public ExtendsClass getExtendsClass() {
+    return extendsClass;
+  }
 
-	public void setExtendsClass(ExtendsClass extendsClass) {
-		this.extendsClass = extendsClass;
-	}
+  public void setExtendsClass(ExtendsClass extendsClass) {
+    this.extendsClass = extendsClass;
+  }
 
-	private List<ImplementsInterface> implementsInterface = new ArrayList<>();
+  private List<ImplementsInterface> implementsInterface = new ArrayList<>();
 
-	@XmlElement(namespace = "http://jaxb2-commons.dev.java.net/basic/inheritance", name = "implements")
-	public List<ImplementsInterface> getImplementsInterface() {
-		return implementsInterface;
-	}
+  @XmlElement(namespace = "http://jaxb3-commons.dev.java.net/basic/inheritance", name = "implements")
+  public List<ImplementsInterface> getImplementsInterface() {
+    return implementsInterface;
+  }
 
-	public void setImplementsInterface(
-			List<ImplementsInterface> implementsInterface) {
-		this.implementsInterface = implementsInterface;
-	}
+  public void setImplementsInterface(
+      List<ImplementsInterface> implementsInterface) {
+    this.implementsInterface = implementsInterface;
+  }
 
 }

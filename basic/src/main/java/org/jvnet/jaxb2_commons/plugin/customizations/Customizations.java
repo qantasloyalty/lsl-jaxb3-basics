@@ -4,7 +4,7 @@ import javax.xml.namespace.QName;
 
 public class Customizations {
 
-  public static final String NAMESPACE_URI = "http://jaxb2-commons.dev.java.net/basic/customizations";
+  public static final String NAMESPACE_URI = "http://jaxb3-commons.dev.java.net/basic/customizations";
 
   public static final String CUSTOMIZATIONS_LOCAL_PART = "customizations";
 

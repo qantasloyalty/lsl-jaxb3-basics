@@ -11,7 +11,7 @@ import com.sun.tools.xjc.model.CPluginCustomization;
 
 public class Customizations {
 
-  public static final String NAMESPACE_URI = "http://jaxb2-commons.dev.java.net/basic/inheritance";
+  public static final String NAMESPACE_URI = "http://jaxb3-commons.dev.java.net/basic/inheritance";
 
   public static final QName OBJECT_FACTORY_ELEMENT_NAME = new QName(NAMESPACE_URI, "objectFactory");
 
